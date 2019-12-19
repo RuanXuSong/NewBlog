@@ -1,13 +1,16 @@
 {
   "private": true,
+  "version": "1.0.0",
+  "description": "我的博客",
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
+    "tsc": "tsc -p ./tsconfig.json",
     "test": "umi test",
-    "lint:es": "eslint --ext .js src mock tests",
-    "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
     "precommit": "lint-staged",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "eslint:fix": "eslint --fix --ext .ts,.tsx src/",
+    "lint:fix": "prettier --check src/**/*.tsx --write"
   },
   "config": {
     "commitizen": {
@@ -15,19 +18,31 @@
     }
   },
   "dependencies": {
+    "antd": "^3.25.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "umi-plugin-polyfill": "^0.2.0"
+    "umi-plugin-polyfill": "^0.2.0",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.15",
+    "axios": "^0.19.0"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "git add ."
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run tsc && npm run eslint:fix && npm run lint:fix && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
     "@types/jest": "^23.3.12",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
+    "@types/lodash": "^4.14.148",
+    "@types/classnames": "^2.2.9",
     "@types/react-test-renderer": "^16.0.3",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.4.0",
