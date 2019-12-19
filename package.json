@@ -1,4 +1,5 @@
 {
+  "name": "web-frontend",
   "private": true,
   "version": "1.0.0",
   "description": "我的博客",
@@ -18,13 +19,14 @@
     }
   },
   "dependencies": {
+    "@ice/store": "^0.4.0",
     "antd": "^3.25.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "umi-plugin-polyfill": "^0.2.0",
+    "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
-    "axios": "^0.19.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "umi-plugin-polyfill": "^0.2.0"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -38,23 +40,23 @@
     }
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.9",
     "@types/jest": "^23.3.12",
+    "@types/lodash": "^4.14.148",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
-    "@types/lodash": "^4.14.148",
-    "@types/classnames": "^2.2.9",
     "@types/react-test-renderer": "^16.0.3",
     "babel-eslint": "^9.0.0",
+    "commitizen": "^4.0.3",
+    "cz-customizable": "^6.2.0",
     "eslint": "^5.4.0",
     "eslint-config-umi": "^1.4.0",
     "eslint-plugin-flowtype": "^2.50.0",
-    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.11.1",
     "husky": "^0.14.3",
-    "commitizen": "^4.0.3",
-    "cz-customizable": "^6.2.0",
     "lint-staged": "^7.2.2",
     "react-test-renderer": "^16.7.0",
     "tslint": "^5.12.0",
