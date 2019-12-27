@@ -1,13 +1,8 @@
 import React from 'react';
-import styles from './index.css';
+import styles from './index.module.less';
 
 const BasicLayout: React.FC = props => {
-  return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>blog</h1>
-      {props.children}
-    </div>
-  );
+  return <div className={styles.normal}>{props.children}</div>;
 };
 
 export default BasicLayout;

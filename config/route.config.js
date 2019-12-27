@@ -9,6 +9,14 @@ export default [
         component: './homepage',
       },
       {
+        path: '/city',
+        component: './city',
+      },
+      {
+        path: '/2dGirl',
+        component: './2dGirl',
+      },
+      {
         path: '*',
         component: './404',
       },
