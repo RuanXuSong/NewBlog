@@ -5,7 +5,7 @@
  * @作者: 阮旭松
  * @Date: 2019-12-19 15:22:03
  * @LastEditors  : 阮旭松
- * @LastEditTime : 2019-12-27 21:28:43
+ * @LastEditTime : 2019-12-28 14:37:24
  */
 import React, { useEffect, useRef, useState } from 'react';
 import THREE from 'three.js';
@@ -401,7 +401,7 @@ const Homepage: React.FC = () => {
         }}
       ></div>
       <Link to="/city">city</Link>
-      <Link to="/2dGirl">2dGirl</Link>
+      <Link to="/2dGirl"> 2dGirl</Link>
     </>
   );
 };
